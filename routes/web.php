@@ -32,6 +32,10 @@ Route::get('agents', function () {
     return view('agents');
 })->name('agents');
 
+Route::get('bot', function (){
+    return view('bot');
+})->name('bot');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

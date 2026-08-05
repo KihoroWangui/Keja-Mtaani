@@ -145,6 +145,7 @@
             <a href="<?= route('auth') ?>">Login</a>
             <a href="<?= route('houses') ?>">Houses</a>
             <a href="<?= route('agents') ?>">Agents</a>
+            <a href="<?= route('bot') ?>">Keja Bot</a>
         </div>
     </nav>
 
@@ -216,8 +217,12 @@
         <button class="btn btn-primary">
             Get Started
         </button>
+        <button class="btn btn-primary">
+            Get Assistance from KejaBot
+        </button>
 
     </section>
+    
 
     <!-- ================= FOOTER ================= -->
 
