@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Keja Mtaani</title>
 
     <style>
@@ -77,7 +78,7 @@
         /* ================= HOW IT WORKS BACKGROUND ================= */
 
         section.section:nth-of-type(2) {
-            background-image: url('/images/section-background.webp');
+            background-image: url('/images/houses backgorund.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -137,17 +138,35 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <nav>
-        <h2>Keja Mtaani</h2>
 
-        <div>
-            <a href="<?= route('dashboard') ?>">Dashboard</a>
-            <a href="<?= route('auth') ?>">Login</a>
-            <a href="<?= route('houses') ?>">Houses</a>
-            <a href="<?= route('agents') ?>">Agents</a>
-            <a href="<?= route('bot') ?>">Keja Bot</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+        <h2 class="navbar-brand mb-0">Keja Mtaani</h2>
+
+        <!-- Hamburger button -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#kejaNavbar"
+                aria-controls="kejaNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="kejaNavbar">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="<?= route('login') ?>">Login</a>
+                <a class="nav-link" href="<?= route('houses') ?>">Houses</a>
+                <a class="nav-link" href="<?= route('agents') ?>">Agents</a>
+                <a class="nav-link" href="<?= route('bot') ?>">Keja Bot</a>
+            </div>
         </div>
-    </nav>
+
+    </div>
+</nav>
 
     <!-- ================= HERO ================= -->
 
@@ -164,7 +183,7 @@
         </button>
 
         <button class="btn btn-secondary">
-            Become an Agent
+            View Houses
         </button>
 
     </section>
@@ -184,27 +203,15 @@
 
             <div class="step">
                 <h3>Hire</h3>
-                <p>Select a scout at a fixed rate</p>
+                <p>Select an agent at a fixed rate</p>
             </div>
 
             <div class="step">
                 <h3>View</h3>
-                <p>Visit houses with your scout</p>
+                <p>Visit houses with your agent</p>
             </div>
 
         </div>
-
-    </section>
-
-    <!-- ================= PRICING ================= -->
-
-    <section class="section pricing">
-
-        <h2>Transparent Pricing</h2>
-
-        <p>KSh 300 – Short distance</p>
-        <p>KSh 500 – Medium range</p>
-        <p>KSh 1000 – Full day</p>
 
     </section>
 
@@ -212,23 +219,23 @@
 
     <section class="section">
 
-        <h2>Ready to Find Your Next House?</h2>
+        <h2><strong>Ready to Find Your Next House?</strong></h2>
 
         <button class="btn btn-primary">
             Get Started
         </button>
         <button class="btn btn-primary">
-            Get Assistance from KejaBot
+            Get help
         </button>
 
     </section>
-    
+
 
     <!-- ================= FOOTER ================= -->
 
     <footer>
         <p>&copy; 2026 Keja Mtaani. All rights reserved.</p>
     </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

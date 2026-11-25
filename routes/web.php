@@ -16,13 +16,13 @@ Route::middleware('dashboard')->group(function () {
     Route::get('/dashboard/reports', [DashboardController::class, 'reports'])->name('dashboard.reports');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/login', function () {
+    return view('login');
+})->middleware(['login', 'verified'])->name('login');
 
-Route::get('auth', function () {
-    return view('auth');
-})->name('auth');
+Route::get('login', function () {
+    return view('login');
+})->name('login');
 
 Route::get('houses', function (){
     return view('houses');

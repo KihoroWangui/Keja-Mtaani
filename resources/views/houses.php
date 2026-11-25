@@ -90,18 +90,34 @@ nav a {
 </head>
 <body>
 
-    <nav>
-         <h2>Keja Mtaani</h2>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
 
-        <div>
-            <a href="<?= route('dashboard') ?>">Dashboard</a>
-            <a href="<?= route('auth') ?>">Login</a>
-            <a href="<?= route('houses') ?>">Houses</a>
-            <a href="<?= route('agents') ?>">Agents</a>
+        <h2 class="navbar-brand mb-0">Keja Mtaani</h2>
 
+        <!-- Hamburger button -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#kejaNavbar"
+                aria-controls="kejaNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation links -->
+        <div class="collapse navbar-collapse" id="kejaNavbar">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="<?= route('login') ?>">Login</a>
+                <a class="nav-link" href="<?= route('houses') ?>">Houses</a>
+                <a class="nav-link" href="<?= route('agents') ?>">Agents</a>
+                <a class="nav-link" href="<?= route('bot') ?>">Keja Bot</a>
+            </div>
         </div>
 
-    </nav>
+    </div>
+</nav>
     <div>
         <h2>Houses Currently Available</h2>
         <p>View the various houses currently available in various parts of Nairobi and its Environs</p>
